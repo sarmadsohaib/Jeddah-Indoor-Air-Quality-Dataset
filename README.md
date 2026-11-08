@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains time-series indoor air quality (IAQ) measurements collected at **two residential indoor monitoring sites in Jeddah, Saudi Arabia**. The records are a publicly shared **two-site subset of a broader eight-site study** investigating short-term, multivariate IAQ forecasting using LSTM, BiLSTM, and Transformer–BiLSTM models.
+This repository contains time-series indoor air quality (IAQ) measurements collected at two residential indoor monitoring sites in Jeddah, Saudi Arabia. The records are a publicly shared two-site subset of a broader eight-site study investigating short-term, multivariate IAQ forecasting using LSTM, BiLSTM, and Transformer–BiLSTM models.
 
 The measurements cover carbon dioxide (CO₂), temperature, relative humidity, formaldehyde (HCHO), VOC and NOₓ indices, airborne particulate matter, particle counts, and a binary presence signal. The sensing system used commercially available environmental sensors integrated into a custom IoT monitoring device.
 
@@ -120,4 +120,4 @@ This dataset is associated with the manuscript:
 
 ## Contact
 
-For dataset questions or corrections, please use the repository's **Issues** section. A corresponding-author contact may be added by the dataset maintainers.
+For dataset questions or corrections, please use the repository's **Issues** section.
