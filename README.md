@@ -6,7 +6,7 @@ This repository contains time-series indoor air quality (IAQ) measurements colle
 
 The measurements cover carbon dioxide (CO₂), temperature, relative humidity, formaldehyde (HCHO), VOC and NOₓ indices, airborne particulate matter, particle counts, and a binary presence signal. The sensing system used commercially available environmental sensors integrated into a custom IoT monitoring device.
 
-**Important scope note:** Sites 1 and 5 were reserved as **held-out test sites** in the associated study. The remaining six sites used for model development are **not included** in this repository. Accordingly, this two-site release can support independent analysis and testing, but **does not by itself allow full reproduction of the model training reported in the paper**.
+**Important scope note:** Sites 1 and 5 were reserved as held-out test sites in the associated study. The remaining six sites used for model development are not included in this repository.
 
 
 ## Dataset Files
