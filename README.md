@@ -10,10 +10,10 @@ The measurements cover carbon dioxide (CO₂), temperature, relative humidity, f
 
 ## Dataset files
 
-| File | Site | Number of records | First timestamp | Last timestamp | Site description |
+| Site | Number of records | First timestamp | Last timestamp | Site description |
 |---|---|---:|---|---|---|
-| [`Site-1_dataset(4).csv`](<Site-1_dataset(4).csv>) | Site 1 | 27,487 | 2026-01-13 17:22:53 | 2026-01-23 17:59:28 | Residential indoor environment with relatively limited natural ventilation |
-| [`Site-5_dataset(20261108-084710).csv`](<Site-5_dataset(20261108-084710).csv>) | Site 5 | 35,180 | 2026-04-07 13:18:10 | 2026-04-20 01:04:02 | Residential indoor environment with more frequent window opening / natural ventilation |
+| Site 1 | 27,487 | 2026-01-13 17:22:53 | 2026-01-23 17:59:28 | Residential indoor environment with relatively limited natural ventilation |
+| Site 5 | 35,180 | 2026-04-07 13:18:10 | 2026-04-20 01:04:02 | Residential indoor environment with more frequent window opening / natural ventilation |
 | **Total** | **2 sites** | **62,667** | — | — | — |
 
 Both files contain **23 columns**, including the `date` and `time` fields and 21 measurement/indicator columns.
