@@ -8,15 +8,18 @@ The measurements cover carbon dioxide (CO₂), temperature, relative humidity, f
 
 **Important scope note:** Sites 1 and 5 were reserved as **held-out test sites** in the associated study. The remaining six sites used for model development are **not included** in this repository. Accordingly, this two-site release can support independent analysis and testing, but **does not by itself allow full reproduction of the model training reported in the paper**.
 
-## Dataset files
 
-| Site | Number of records | First timestamp | Last timestamp | Site description |
-|---|---|---:|---|---|---|
+## Dataset Files
+
+| Site | Number of Records | First Timestamp | Last Timestamp | Site Description |
+|---|---:|---|---|---|
 | Site 1 | 27,487 | 2026-01-13 17:22:53 | 2026-01-23 17:59:28 | Residential indoor environment with relatively limited natural ventilation |
-| Site 5 | 35,180 | 2026-04-07 13:18:10 | 2026-04-20 01:04:02 | Residential indoor environment with more frequent window opening / natural ventilation |
-| **Total** | **2 sites** | **62,667** | — | — | — |
+| Site 5 | 35,180 | 2026-04-07 13:18:10 | 2026-04-20 01:04:02 | Residential indoor environment with more frequent window opening and natural ventilation |
+| **Total (2 sites)** | **62,667** | — | — | — |
 
-Both files contain **23 columns**, including the `date` and `time` fields and 21 measurement/indicator columns.
+Both datasets contain **23 columns**, comprising two timestamp fields (`date` and `time`) and 21 environmental measurements and indicators. Measurements were collected at approximately 30-second intervals.
+
+
 
 ### Time and sampling information
 
@@ -99,16 +102,6 @@ print("Rows:", len(combined))
 print(combined.groupby("site")["scd30_co2_ppm"].describe())
 ```
 
-**Forecasting caution:** Split observations by site and time **before** fitting any imputation, scaling, PCA, or model parameters. Avoid distributing highly overlapping sequence windows across training and test sets, as this can produce information leakage.
-
-## Data quality and limitations
-
-- The two site files were examined for column names, date ranges, row counts, and empty fields. They have not been independently validated against reference-grade instruments.
-- The study describes use of manufacturer-supplied calibration and compensation features, but **no independent laboratory calibration** was reported.
-- Sensor drift, environmental interferences, warm-up periods, irregular sampling, and possible outliers should be considered.
-- SGP41 index values should not be interpreted as gas concentration measurements.
-- The data are from **two indoor environments** and do not represent all buildings or seasons in Jeddah.
-- This subset contains **test sites only** from the broader eight-site study; training datasets, training code, and model weights are not included here.
 
 ## Associated publication and how to cite
 
@@ -116,21 +109,7 @@ This dataset is associated with the manuscript:
 
 > **Transformer BiLSTM-Based Multivariate Indoor Air Quality Forecasting for Edge IoT Smart Buildings**. *PLOS ONE* (publication details and DOI to be inserted after publication).
 
-**If you use these data in a publication, please cite the associated paper when it becomes available and cite the dataset repository/release itself.** For a stable dataset citation, archive a numbered GitHub release in [Zenodo](https://zenodo.org/) and add the assigned dataset DOI below.
 
-- **Paper DOI:** `To be added after publication`
-- **Dataset DOI:** `To be added after archiving a release`
-- **Dataset authors and citation year:** `To be confirmed by the dataset creators`
-
-Please do not use the manuscript title as if the article has already been published before its publication details are confirmed.
-
-## Access permissions, privacy, and reuse
-
-Site access for the field study was obtained through verbal permission from the owners or authorized occupants; no official field-site permits were required according to the study description.
-
-**Before making this repository public**, confirm that permission extends to **public dissemination** of these measurements. In particular, the files contain timestamped `presence` records, which may reveal patterns of occupancy. Consider removing or aggregating that field, or adjusting date/time granularity if this is necessary to protect participants' privacy, and ensure any applicable research-ethics obligations are satisfied.
-
-**License:** Not yet specified. Add a data-reuse license (for example, CC BY 4.0, if all rights holders agree) before publication. A citation request in a README does not replace an actual license.
 
 ## Sensor documentation
 
